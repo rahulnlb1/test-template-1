@@ -1,0 +1,9 @@
+template: true
+pipelines:
+  - name: {{ .Values.MicroPipeline.name | default "Pipeline" }}
+    steps:
+      - name: {{ .Values.MicroPipeline.step.name | default "PipelineStep" }}
+        type: {{ .Values.MicroPipeline.step.type | default "Bash" }}
+        {{- if .Values.MicroPipeline.step.execution }}
+        execution: {{ .Values.MicroPipeline.step.execution }}
+        {{- end }}
