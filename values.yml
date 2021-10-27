@@ -3,6 +3,4 @@ MicroPipeline:
   step:
     name: step1
     type: Bash
-    execution:
-    - echo "hello"
-    - echo "world"
+    execution: [ echo "hello", echo "world" ]
