@@ -1,4 +1,6 @@
 template: true
+valuesFilePath: values.yml
+
 pipelines:
   - name: {{ .Values.MicroPipeline.name | default "Pipeline" }}
     steps:
