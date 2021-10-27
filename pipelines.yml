@@ -6,4 +6,7 @@ pipelines:
     steps:
       - name: {{ .Values.MicroPipeline.step.name | default "PipelineStep" }}
         type: {{ .Values.MicroPipeline.step.type | default "Bash" }}
-        execution: {{ toYaml .Values.MicroPipeline.step.execution }}
+        execution: 
+        {{- range $_, $p := .Values.MicroPipeline.step.execution }}
+        - {{ $p }}
+        {{- end }}
