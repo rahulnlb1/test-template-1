@@ -6,4 +6,4 @@ pipelines:
     steps:
       - name: {{ .Values.MicroPipeline.step.name | default "PipelineStep" }}
         type: {{ .Values.MicroPipeline.step.type | default "Bash" }}
-        execution: {{ .Values.MicroPipeline.step.execution }}
+        execution: {{ toYaml .Values.MicroPipeline.step.execution }}
