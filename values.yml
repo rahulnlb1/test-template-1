@@ -1,5 +1,5 @@
 MicroPipeline:
-  name: test-local
+  name: testlocal
   step:
     name: step1
     type: Bash
