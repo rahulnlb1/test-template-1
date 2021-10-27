@@ -1,0 +1,8 @@
+MicroPipeline:
+  name: test-local
+  step:
+    name: step1
+    type: Bash
+    execution:
+    - echo "hello"
+    - echo "world"
