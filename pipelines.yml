@@ -7,7 +7,7 @@ pipelines:
       - name: {{ .Values.MicroPipeline.step.name | default "PipelineStep" }}
         type: {{ .Values.MicroPipeline.step.type | default "Bash" }}
         execution:
-        {{-if .Values.MicroPipeline.step.execution.onExecute }}
+        {{- if .Values.MicroPipeline.step.execution.onExecute }}
           onExecute:
             {{ .Values.MicroPipeline.step.execution.onExecute }}
         {{- end }}
