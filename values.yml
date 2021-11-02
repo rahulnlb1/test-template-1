@@ -5,5 +5,5 @@ MicroPipeline:
     type: Bash
     execution:
       onExecute: 
-      - echo "hello"
-      - echo "world"
+        - echo "hello"
+        - echo "world"
