@@ -2,9 +2,9 @@ template: true
 valuesFilePath: values.yml
 
 pipelines:
-  - name: {{ .Values.MicroPipeline.name | default "Pipeline" }}
+  - name: {{ .Values.MicroPipeline.name }}
     steps:
-      - name: {{ .Values.MicroPipeline.step.name | default "PipelineStep" }}
+      - name: {{ .Values.MicroPipeline.step.name }}
         type: {{ .Values.MicroPipeline.step.type | default "Bash" }}
         {{- if .Values.MicroPipeline.step.execution }}
         execution: {{ .Values.MicroPipeline.step.execution }}
